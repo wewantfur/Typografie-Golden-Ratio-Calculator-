@@ -2,5 +2,4 @@ The JavascriptGolden Ratio Calculator inspired by the great article by Chris Pea
 The Calculator makes use of Tangle by Bret Vicro.
 Tangle is a JavaScript library for creating reactive documents. Your readers can interactively explore possibilities, play with parameters, and see the document update immediately. Tangle is super-simple and easy to learn.
 
-Blogpost: http://www.wewantfur.com/web-typografie-golden-ratio-tool/ (dutch)
 Demo: http://www.wewantfur.com/tools/typography-golden-ratio-calculator/
