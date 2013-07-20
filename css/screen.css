@@ -1,0 +1,79 @@
+body{
+	background:#f4f4f4;
+	color:#242424;
+	font-size: 16px;
+	line-height: 28px;
+	margin-bottom: 28px;
+}
+
+.TKAdjustableNumber,
+.TKAdjustableNumberDown{
+	color:#fff !important;
+	margin-right: 10px;
+	border-bottom: 1px dashed #80c3e5 !important;
+}
+
+.TKAdjustableNumberHelp{
+	color:#80c3e5 !important;	 
+}
+
+nav{
+	background: #0087ca;
+	width: 100%;
+	position:absolute;	
+	top:0;
+	left:0;
+	text-align: center;
+	line-height: 80px;
+	height: 80px;
+}
+
+
+#golden{
+	width: 480px;
+	color:#80c3e5;
+	margin: 0 auto;
+	height: 80px;
+}
+
+.result{
+	color:#ffc800;
+	font-weight: 600;
+}
+
+
+form{
+	text-align: center;
+	display: block;
+	width: 480px;
+	margin: 120px auto 20px auto;
+}
+
+form select{
+	width: 460px;
+	text-align: center;
+	margin: 20px 0;
+}
+
+
+h1{
+	width: 480px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 27px;
+	text-transform: capitalize;
+}
+
+article{
+	margin: 20px auto;	
+	padding: 20px;
+	background: #fff;
+}
+
+
+
+.logo{
+	display: block;
+	text-align: center;
+	margin:40px 0;
+}

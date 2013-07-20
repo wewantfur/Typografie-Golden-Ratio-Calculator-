@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name=”viewport” content=”width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no” />
+
+
+		
+		<title>The Typography Golden Ratio Calculator</title>
+
+
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<link href="http://cdn.wewantfur.com/basicfur/css/basicfur-v2-min.css" rel="stylesheet">
+		<link href="css/screen.css" rel="stylesheet" rel="stylesheet" media="screen" />
+		
+    <!-- Tangle -->
+    <script type="text/javascript" src="js/Tangle.js"></script>
+
+    <!-- TangleKit (optional) -->
+    <link rel="stylesheet" href="TangleKit/TangleKit.css" type="text/css">
+    <script type="text/javascript" src="TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="TangleKit/TangleKit.js"></script>
+	    			
+	    <script type="text/javascript">
+	
+	        function setUpTangle () {
+	
+	            var element = document.getElementById("golden");
+	            var phi = (1+Math.sqrt(5))/2
+	            
+	
+	            var tangle = new Tangle(element, {
+	                initialize: function () {
+	                    this.width = 480;
+	                    this.fontsize = 16;
+	                },
+	                update: function () {
+	                    this.lineheight =  Math.round((phi - (1/(2*phi)) * (1-(this.width/Math.pow(this.fontsize*phi,2)))) * this.fontsize)
+	                	                    
+	                    $('article').width(this.width);
+	                    $('p').css({
+	                    	"font-size": this.fontsize+"px",
+	                    	"line-height": this.lineheight+"px",
+	                    	"margin-bottom": this.lineheight+"px"
+	                    });
+	                    
+	                    $('ul').css({
+	                   	 	"font-size": this.fontsize+"px",
+	                   	 	"line-height": this.lineheight+"px",
+	                        "margin-left": this.lineheight+"px",
+	                    	"margin-bottom": this.lineheight+"px"
+	                    });
+	                    
+	                    
+	                }
+	            });
+	        }
+	        
+	     $(document).ready(function () {   
+	        $("#fontfamily").change(function() {
+		
+			$('article').css("font-family", $(this).val());
+		});
+});
+	    </script>
+		
+		
+
+
+	</head>
+<body onload="setUpTangle();">
+
+<nav>
+	<div id="golden">
+			width: <span data-var="width" class="TKAdjustableNumber"data-min="8" data-max="1024" >px</span>
+			font-size: <span data-var="fontsize" class="TKAdjustableNumber"data-min="8" data-max="1024" >px</span>
+			
+			line-height: <span data-var="lineheight" class="result">px</span>	
+	</div>
+</nav>
+
+
+<form>
+<h1>The typography golden ratio calculator</h1>
+<select id="fontfamily">
+	<option selected="selected" value="Lucida Sans Unicode, Lucida Grande, sans-serif">Lucida Sans Unicode, Lucida Grande, sans-serif</option>
+	<option value="Arial,Helvetica, sans-serif">Arial,Helvetica, sans-serif</option>
+	<option value="Arial Black,Gadget, sans-serif">Arial Black,Gadget, sans-serif</option>
+	<option value="Comic Sans MS, cursive">Comic Sans MS, cursive</option>
+	<option value="Courier New, monospace">Courier New, monospace</option>
+	<option value="Georgia, serif">Georgia, serif</option>
+	<option value="Palatino Linotype, Book Antiqua, Palatino, serif">Palatino Linotype, Book Antiqua, Palatino, serif</option>
+	<option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+	<option value="Times New Roman, Times, serif">Times New Roman, Times, serif</option>
+	<option value="Trebuchet MS, sans-serif">Trebuchet MS, sans-serif</option>
+	<option value="Verdana, Verdana, Geneva, sans-serif">Verdana, Verdana, Geneva, sans-serif</option>
+	<option value="MS Sans Serif, Geneva, sans-serif">MS Sans Serif, Geneva, sans-serif</option>
+	<option value="MS Serif, New York, serif">MS Serif, New York, serif</option>
+</select>
+</form>
+
+<article>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.  Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed.</p>
+
+<p>Molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla.</p>
+
+
+<ul>
+	<li>Nulla At Nulla Justo, Eget Luctus</li>
+	<li>PLorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+	<li>Molestie augue sit amet leo consequat posuere</li>
+	<li>Suspendisse dictum feugiat nisl ut dapibus</li>
+</ul>
+
+
+<p>Fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt congue sed ut dui. Morbi malesuada nulla nec purus convallis consequat. Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu.</p>
+
+
+<p>The power of golden ratio typography cannot be understated. By choosing the line-height of your primary text as your new “baseline unit”, you are effectively tying all the dimensions of your layout together with the golden ratio.</p>
+
+
+
+</article>
+
+<a class="logo"  href="http://www.wewantfur.com/index.php?tid=155" alt="Fur"><img src="img/fur-logo.png" alt="Fur Web & Apps" width="60" height="60"></a>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19017039-1']);
+  _gaq.push(['_setDomainName', 'wewantfur.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+ 		 		
+ 	
+</body>
+</html>
